@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css?family=Bangers&display=swap');
+h1{
+}
+html, body{
+    height:100%;
+  background: no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+#search-result
+{
+  margin:20px;
+  background-color:#fff;
+  padding:15px;
+}
+
+.bubble{
+  animation: animateElement linear .5s;
+  animation-iteration-count: 1;
+ }
+
+@keyframes animateElement{
+  0% {
+    opacity:0;
+    transform:  translate(0px,10px);
+  }
+  100% {
+    opacity:1;
+    transform:  translate(0px,0px);
+  }
+}
+
+#search-result{
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+.ui.card {
+  display: inline-block;
+	overflow-wrap: break-word !important;
+}
+
+#review{
+	text-align: center;
+}
+.poster{
+	width:400px;
+}
+textarea{
+	width:400px;
+}
+
+#chatborder {
+  border: 0.2em solid rgba(15, 169, 209, 0.27);
+	background-color: white;
+  padding-top: 10px;
+  padding-bottom: 15px;
+  padding-right: 15px;
+  padding-left: 15px;
+  border-radius: 15px;
+}
+
+.chatlog {
+	font-size: 1.2em;
+	text-align:right;
+}
+.chatlog1 {
+	font-size: 1.2em;
+}
+
+.speech-bubble-left {
+	margin-left: 15px;
+	padding:5px;
+	color: white;
+	position: relative;
+	background: #00aabb;
+	border-radius: .4em;
+}
+
+.speech-bubble-left:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 0;
+	height: 0;
+	border: 11px solid transparent;
+	border-right-color: #00aabb;
+	border-left: 0;
+	border-top: 0;
+	margin-top: -5.5px;
+	margin-left: -11px;
+}
+
+.speech-bubble-right {
+	margin-right: 15px;
+	padding:5px;
+	color: white;
+	position: relative;
+	background: #00aabb;
+	border-radius: .4em;
+}
+
+.speech-bubble-right:after {
+	content: '';
+	position: absolute;
+	right: 0;
+	top: 50%;
+	width: 0;
+	height: 0;
+	border: 11px solid transparent;
+	border-left-color: #00aabb;
+	border-right: 0;
+	border-top: 0;
+	margin-top: -5.5px;
+	margin-right: -11px;
+}
+
+#chatbox {
+  height: 50px;
+}
+
+.chatbot{
+	position: fixed;
+    bottom: 0;
+	width:30%
+}
+
+.title{
+	margin-left: 50px;
+}
+
+
+
+

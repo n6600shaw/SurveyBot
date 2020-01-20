@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SurveyBot</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"
+            async></script>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='JS/jquery-ui-1.12.1/jquery-ui.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/style.css') }}"/>
+
+    <script
+            src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+    <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
+</head>
+<body style="background-image: url({{ url_for('static', filename='Image/back.jpg') }}) ">
+
+<div class="header" style="margin-top: 4em;">
+    <div class="ui inverted top fixed menu">
+        <h1 class="header item">SurveyBot</h1>
+    </div>
+
+    <div class="ui section divider"></div>
+</div>
+<div class="container-fluid">
+    <div classs="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-6">
+            <div class="ui container search-section" style="margin-top: 7em;">
+                <div><h2>Search a movie title in IMDB</h2>
+
+                    <div class="ui fluid action input"><input type="text" value="" id="search-input"
+                                                              placeholder="Search a movie title...">
+                        <button class="ui icon button" id="search" role="button"><i aria-hidden="true"
+                                                                                    class="search icon"></i></button>
+                    </div>
+                </div>
+                <h2>Click on a movie poster to start a review survey chat</h2>
+                <div class="ui section divider"></div>
+                <div id="search-result">
+
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class=" chatbot" style="margin-top: 0em;">
+                <div id='chatborder'>
+                    <p id="chatlog7" class="chatlog1">&nbsp;</p>
+                    <p id="chatlog6" class="chatlog">&nbsp;</p>
+                    <p id="chatlog5" class="chatlog1">&nbsp;</p>
+                    <p id="chatlog4" class="chatlog">&nbsp;</p>
+                    <p id="chatlog3" class="chatlog1">&nbsp;</p>
+                    <p id="chatlog2" class="chatlog">&nbsp;</p>
+                    <p id="chatlog1" class="chatlog1">&nbsp;</p>
+                    <div class="ui fluid action input">
+                        <input type="text" name="chat" id="chatbox" placeholder="" onfocus="placeHolder()">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+<script src="{{ url_for('static', filename='JS/chatbot.js') }}"></script>
+<script src="{{ url_for('static', filename='JS/main.js') }}"></script>
+</html>
